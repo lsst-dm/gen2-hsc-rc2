@@ -28,7 +28,7 @@ singleFrameDriver.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --reru
 singleFrameDriver.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN-sfm --batch-type slurm --mpiexec='-bind-to socket' --job sfmVI --id visit=$VVDS_I ccd=0..8^10..103 --cores 70 --time 900 
 singleFrameDriver.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN-sfm --batch-type slurm --mpiexec='-bind-to socket' --job sfmVZ --id visit=$VVDS_Z ccd=0..8^10..103 --cores 70 --time 900 
 singleFrameDriver.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN-sfm --batch-type slurm --mpiexec='-bind-to socket' --job sfmVY --id visit=$VVDS_Y ccd=0..8^10..103 --cores 70 --time 900 
-##
+
 singleFrameDriver.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN-sfm --batch-type slurm --mpiexec='-bind-to socket' --job sfmGG --id visit=$GAMA_G ccd=0..8^10..103 --cores 70 --time 900 
 singleFrameDriver.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN-sfm --batch-type slurm --mpiexec='-bind-to socket' --job sfmGR --id visit=$GAMA_R ccd=0..8^10..103 --cores 70  --time 900 
 singleFrameDriver.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN-sfm --batch-type slurm --mpiexec='-bind-to socket' --job sfmGI --id visit=$GAMA_I ccd=0..8^10..103 --cores 70 --time 900 
@@ -81,20 +81,18 @@ skyCorrection.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB --rerun $RE
 skyCorrection.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB --rerun $RERUN-sfm --batch-type=slurm --mpiexec='-bind-to socket' --time 90 --cores 24 --id visit=$COSMOS_Y --job skyCY 
 
 
-
-
-coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN --batch-type=slurm --mpiexec='-bind-to socket' --job coaddVG --time 500 --cores 24  --id tract=9697  filter=HSC-G --selectId ccd=0..8^10..103 visit=$VVDS_G  --no-versions 
+coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN --batch-type=slurm --mpiexec='-bind-to socket' --job coaddVG --time 500 --cores 24  --id tract=9697  filter=HSC-G --selectId ccd=0..8^10..103 visit=$VVDS_G
 coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN --batch-type=slurm --mpiexec='-bind-to socket' --job coaddVR --time 500 --cores 24  --id tract=9697  filter=HSC-R --selectId ccd=0..8^10..103 visit=$VVDS_R  
 coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN --batch-type=slurm --mpiexec='-bind-to socket' --job coaddVI --time 500 --cores 24  --id tract=9697  filter=HSC-I --selectId ccd=0..8^10..103 visit=$VVDS_I  
 coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN --batch-type=slurm --mpiexec='-bind-to socket' --job coaddVZ --time 500 --cores 24  --id tract=9697  filter=HSC-Z --selectId ccd=0..8^10..103 visit=$VVDS_Z 
 coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN --batch-type=slurm --mpiexec='-bind-to socket' --job coaddVY --time 500 --cores 24  --id tract=9697  filter=HSC-Y --selectId ccd=0..8^10..103 visit=$VVDS_Y 
-##
+
 coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN --batch-type=slurm --mpiexec='-bind-to socket' --job coaddGG --time 500 --cores 24  --id tract=9615  filter=HSC-G --selectId ccd=0..8^10..103 visit=$GAMA_G 
 coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN --batch-type=slurm --mpiexec='-bind-to socket' --job coaddGR --time 500 --cores 24  --id tract=9615  filter=HSC-R --selectId ccd=0..8^10..103 visit=$GAMA_R 
 coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN --batch-type=slurm --mpiexec='-bind-to socket' --job coaddGI --time 500 --cores 24  --id tract=9615  filter=HSC-I --selectId ccd=0..8^10..103 visit=$GAMA_I  
 coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN --batch-type=slurm --mpiexec='-bind-to socket' --job coaddGZ --time 500 --cores 24  --id tract=9615  filter=HSC-Z --selectId ccd=0..8^10..103 visit=$GAMA_Z 
 coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN --batch-type=slurm --mpiexec='-bind-to socket' --job coaddGY --time 500 --cores 24  --id tract=9615  filter=HSC-Y --selectId ccd=0..8^10..103 visit=$GAMA_Y 
-####
+
 coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN --batch-type=slurm --mpiexec='-bind-to socket' --job coaddCG --time 600 --cores 24  --id tract=9813 filter=HSC-G --selectId ccd=0..8^10..103 visit=$COSMOS_G  
 coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN  --batch-type=slurm --mpiexec='-bind-to socket' --job coaddCR --time 600 --cores 24  --id tract=9813 filter=HSC-R --selectId ccd=0..8^10..103 visit=$COSMOS_R 
 coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN    --batch-type=slurm --mpiexec='-bind-to socket' --job coaddCI --time 600 --cores 24  --id tract=9813 filter=HSC-I --selectId ccd=0..8^10..103 visit=$COSMOS_I  
@@ -103,9 +101,6 @@ coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RE
 coaddDriver.py  /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN    --batch-type=slurm --mpiexec='-bind-to socket' --job coaddCN --time 600 --cores 24  --id tract=9813 filter=NB0921 --selectId ccd=0..8^10..103 visit=$COSMOS_N 
 
 
-
 multiBandDriver.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN --batch-type=slurm --mpiexec='-bind-to socket' --job mtCosmos --nodes 7 --procs 8 --time 45000 --id tract=9813 filter=HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y^NB0921 
-
 multiBandDriver.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN --batch-type=slurm --mpiexec='-bind-to socket' --job mtVvds --node 9 --procs 10 --time 24000 --id tract=9697 filter=HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y 
-
 multiBandDriver.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN --batch-type=slurm --mpiexec='-bind-to socket' --job mtGama --node 9 --procs 10 --time 24000 --id tract=9615 filter=HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y 
