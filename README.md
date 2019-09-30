@@ -28,6 +28,7 @@ more information on the pipeline drivers and the as-is approach.
   * skyCorrection.py
   * coaddDriver.py
   * multiBandDriver.py
+  # forcedPhotCcd.py
 
 * pipe\_analysis
   * visitAnalysis.py
