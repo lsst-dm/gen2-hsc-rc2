@@ -43,6 +43,7 @@ singleFrameDriver.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --reru
 singleFrameDriver.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB/ --rerun $RERUN-sfm --batch-type slurm --mpiexec='-bind-to socket' --job sfmCN --id visit=$COSMOS_N ccd=0..8^10..103 --cores 70 --time 900 
 
 
+# Better submit them to the cluster workers
 jointcal.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB --rerun $RERUN-sfm:$RERUN --id ccd=0..8^10..103 visit=26024^26028^26032^26036^26044^26046^26048^26050^26058^26060^26062^26070^26072^26074^26080^26084^26094 filter=HSC-G tract=9615 
 jointcal.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB --rerun $RERUN-sfm:$RERUN --id ccd=0..8^10..103 visit=1258^1262^1270^1274^1278^1280^1282^1286^1288^1290^1294^1300^1302^1306^1308^1310^1314^1316^1324^1326^1330^24494^24504^24522^24536^24538 filter=HSC-I tract=9615 
 jointcal.py /datasets/hsc/repo --calib /datasets/hsc/repo/CALIB --rerun $RERUN-sfm:$RERUN --id ccd=0..8^10..103 visit=23864^23868^23872^23876^23884^23886^23888^23890^23898^23900^23902^23910^23912^23914^23920^23924^28976 filter=HSC-R tract=9615 
